@@ -19,8 +19,7 @@ data = pd.DataFrame({"r" : r, "s" : s})
 data.to_csv("result.csv",index=False)
 
 #read image and show transformed image
-img_bgr = cv2.imread('Bird feeding 3 low contrast.tif')
-img = cv2.cvtColor(img_bgr, cv2.COLOR_BGR2RGB)
+img = cv2.imread('Bird feeding 3 low contrast.tif')
 img_tf = tf(img)
 plt.imshow(img_tf.astype(np.uint8))
 plt.show()
